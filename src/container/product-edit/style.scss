@@ -51,11 +51,25 @@
     color: s.color('light');
   }
 
+  &__buttons {
+    display: flex;
+    gap: s.space(4);
+  }
+
   &__button {
-    border: 1px solid s.color('light');
-    background-color: s.color('mainBlue');
     padding: s.space(2);
     border-radius: 20px;
     color: s.color('mainWhite');
+    width: 100%;
+
+    &-update {
+      background-color: s.color('mainBlue');
+    }
+
+    &-delete {
+      background-color: s.color('mainWarning');
+      text-decoration: none;
+      text-align: center;
+    }
   }
 }

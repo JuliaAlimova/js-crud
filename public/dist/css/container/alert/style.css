@@ -1,19 +1,25 @@
-div {
+.alert {
   display: grid;
   gap: 20px;
   margin: 10px;
   justify-content: center;
 }
 
-h1 {
+.alert__title {
   font-size: 30px;
   font-weight: 500;
-  color: #008a10;
+  color: #bc0000;
   padding-bottom: 4px;
 }
 
-a {
-  color: #225df3;
+.alert__link {
+  padding: 8px;
+  border-radius: 20px;
+  color: #fff;
+  width: 100%;
+  background-color: #225df3;
+  text-decoration: none;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

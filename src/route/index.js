@@ -23,17 +23,22 @@ class Product {
     id,
     { name, price, description },
   ) => {
-    const product = this.getById(id)
-    if (product) {
+    const productIndex = this.#list.findIndex(
+      (product) => product.id === id,
+    )
+
+    if (productIndex !== -1) {
+      const product = this.#list[productIndex]
+
       if (name && price && description) {
         product.name = name
         product.price = price
         product.description = description
         return true
       }
-    } else {
-      return false
     }
+
+    return false
   }
   static deleteById = (id) => {
     const index = this.#list.findIndex(
@@ -77,14 +82,22 @@ router.get('/product-create', function (req, res) {
 router.post('/product-create', function (req, res) {
   const { name, price, description } = req.body
 
-  const product = new Product(name, price, description)
+  if (name && price && description) {
+    const product = new Product(name, price, description)
+    Product.add(product)
 
-  Product.add(product)
-
-  res.render('alert', {
-    style: 'alert',
-    info: 'Success! Product created!',
-  })
+    res.render('alert', {
+      style: 'alert',
+      info: 'Success! Product created!',
+      success: true,
+    })
+  } else {
+    res.render('alert', {
+      style: 'alert',
+      info: 'Error! Failed to create product! Enter all fields!',
+      success: false,
+    })
+  }
 })
 
 // ================================================================
@@ -100,6 +113,65 @@ router.get('/product-list', function (req, res) {
       isEmpty: list.length === 0,
     },
   })
+})
+
+// ================================================================
+
+router.get('/product-edit', function (req, res) {
+  const id = Number(req.query.id)
+  const product = Product.getById(id)
+
+  res.render('product-edit', {
+    style: 'product-edit',
+    product,
+  })
+})
+
+// ================================================================
+
+router.post('/product-edit', function (req, res) {
+  const { id, name, price, description } = req.body
+
+  const success = Product.updateById(Number(id), {
+    name,
+    price,
+    description,
+  })
+
+  if (success) {
+    res.render('alert', {
+      style: 'alert',
+      info: 'Success! Product updated!',
+      success: true,
+    })
+  } else {
+    res.render('alert', {
+      style: 'alert',
+      info: 'Error! Product not found!',
+      success: false,
+    })
+  }
+})
+
+// ================================================================
+
+router.get('/product-delete', function (req, res) {
+  const id = Number(req.query.id)
+  const success = Product.deleteById(id)
+
+  if (success) {
+    res.render('alert', {
+      style: 'alert',
+      info: 'Success! Product deleted!',
+      success: true,
+    })
+  } else {
+    res.render('alert', {
+      style: 'alert',
+      info: 'Error! Product not found! Failed to delete product!',
+      success: false,
+    })
+  }
 })
 
 // ================================================================
