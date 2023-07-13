@@ -1,0 +1,19 @@
+div {
+  display: grid;
+  gap: 20px;
+  margin: 10px;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #008a10;
+  padding-bottom: 4px;
+}
+
+a {
+  color: #225df3;
+}
+
+/*# sourceMappingURL=style.css.map */

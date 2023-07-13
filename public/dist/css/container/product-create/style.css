@@ -1,0 +1,62 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 32px;
+}
+.form__title {
+  font-size: 40px;
+  font-weight: 500;
+  color: #225df3;
+  padding-bottom: 4px;
+  text-align: center;
+}
+.form__name {
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+.form__content {
+  display: grid;
+  gap: 24px;
+}
+.form__field:first-of-type {
+  display: flex;
+  gap: 8px;
+}
+.form__field:first-of-type div {
+  width: 100%;
+}
+.form__label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.form__input {
+  border: 1px solid #bfbdbd;
+  padding: 8px;
+  width: 100%;
+}
+.form__prompt {
+  font-size: 12px;
+  color: #bfbdbd;
+}
+.form__button {
+  border: 1px solid #bfbdbd;
+  background-color: #225df3;
+  padding: 8px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.user-list li {
+  padding: 5px 0 5px 15px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,17 @@
+@use '../../lib/service.scss' as s;
+
+div {
+  display: grid;
+  gap: 20px;
+  margin: 10px;
+  justify-content: center;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: s.color('mainSuccess');
+  padding-bottom: s.space(1);
+}
+a {
+  color: s.color('mainBlue');
+}
