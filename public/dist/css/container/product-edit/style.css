@@ -1,0 +1,63 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 32px;
+}
+.form__title {
+  font-size: 40px;
+  font-weight: 500;
+  color: #225df3;
+  padding-bottom: 4px;
+  text-align: center;
+}
+.form__name {
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+.form__content {
+  display: grid;
+  gap: 24px;
+}
+.form__field:first-of-type {
+  display: flex;
+  gap: 8px;
+}
+.form__field:first-of-type div {
+  width: 100%;
+}
+.form__label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.form__input {
+  border: 1px solid #bfbdbd;
+  padding: 8px;
+  width: 100%;
+}
+.form__prompt {
+  font-size: 12px;
+  color: #bfbdbd;
+}
+.form__buttons {
+  display: flex;
+  gap: 16px;
+}
+.form__button {
+  padding: 8px;
+  border-radius: 20px;
+  color: #fff;
+  width: 100%;
+}
+.form__button-update {
+  background-color: #225df3;
+}
+.form__button-delete {
+  background-color: #bc0000;
+  text-decoration: none;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

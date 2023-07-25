@@ -1,0 +1,75 @@
+@use '../../lib/service.scss' as s;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: s.space(4);
+  gap: s.space(8);
+
+  &__title {
+    font-size: 40px;
+    font-weight: 500;
+    color: s.color('mainBlue');
+    padding-bottom: s.space(1);
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: s.space(4);
+  }
+
+  &__content {
+    display: grid;
+    gap: s.space(6);
+  }
+
+  &__field:first-of-type {
+    display: flex;
+    gap: s.space(2);
+
+    div {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid s.color('light');
+    padding: s.space(2);
+    width: 100%;
+  }
+
+  &__prompt {
+    font-size: 12px;
+    color: s.color('light');
+  }
+
+  &__buttons {
+    display: flex;
+    gap: s.space(4);
+  }
+
+  &__button {
+    padding: s.space(2);
+    border-radius: 20px;
+    color: s.color('mainWhite');
+    width: 100%;
+
+    &-update {
+      background-color: s.color('mainBlue');
+    }
+
+    &-delete {
+      background-color: s.color('mainWarning');
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
