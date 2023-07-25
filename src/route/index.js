@@ -82,10 +82,10 @@ router.post('/product-create', function (req, res) {
     })
   }
 })
-  
-  // ================================================================
-  
-  router.get('/product-list', function (req, res) {
+
+// ================================================================
+
+router.get('/product-list', function (req, res) {
   const list = Product.getList()
 
   res.render('product-list', {
@@ -97,9 +97,9 @@ router.post('/product-create', function (req, res) {
     },
   })
 })
-             
+
 // ================================================================
-             
+
 router.get('/product-edit', function (req, res) {
   const id = Number(req.query.id)
   const product = Product.getById(id)
@@ -156,7 +156,7 @@ router.get('/product-delete', function (req, res) {
     })
   }
 })
-  
+
 // ================================================================
 // ================================================================
 // ================================================================
@@ -185,7 +185,9 @@ class User {
   static deleteByID = (id) => {
     const index = this.#list.findIndex(
       (user) => user.id === id,
-  
+    )
+  }
+
   static updateByID = (id, data) => {
     const user = this.getByID(id)
 
