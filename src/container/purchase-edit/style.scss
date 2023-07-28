@@ -1,0 +1,33 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/purchase-heading/style.scss' as
+  heading;
+@use '../../component/purchase-product/style.scss' as
+  purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  padding: 100px 460px;
+  margin: 0 auto;
+}
+
+.form-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  max-width: 952px;
+  width: 100%;
+
+  &__group-fields {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.info-group {
+  display: grid;
+  gap: 8px;
+}

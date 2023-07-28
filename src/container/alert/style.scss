@@ -1,23 +1,38 @@
 @use '../../lib/service.scss' as s;
 
 .alert {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.alert-description {
   display: grid;
-  gap: 20px;
-  margin: 10px;
-  justify-content: center;
+  gap: 10px;
+
+  &__message {
+    font-size: 48px;
+    font-weight: 500;
+    color: s.color('mainWarning');
+  }
+  &__info {
+    font-size: 30px;
+  }
 }
-.alert__title {
-  font-size: 30px;
-  font-weight: 500;
-  color: s.color('mainWarning');
-  padding-bottom: s.space(1);
-}
-.alert__link {
-  padding: s.space(2);
-  border-radius: 20px;
-  color: s.color('mainWhite');
-  width: 100%;
-  background-color: s.color('mainBlue');
-  text-decoration: none;
-  text-align: center;
+
+.alert-list {
+  display: grid;
+  gap: 10px;
+  align-items: center;
+
+  &__link {
+    padding: s.space(4);
+    border-radius: 20px;
+    color: s.color('mainWhite');
+    background-color: s.color('mainBlue');
+    text-decoration: none;
+    text-align: center;
+  }
 }

@@ -1,0 +1,20 @@
+.heading {
+  display: grid;
+  gap: 20px;
+}
+.heading__title {
+  color: #225df3;
+  font-size: 40px;
+  font-weight: 500;
+}
+.heading__title-small {
+  font-size: 24px;
+}
+.heading__title-center {
+  text-align: center;
+}
+.heading__info-center {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

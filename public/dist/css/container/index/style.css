@@ -8,7 +8,7 @@
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 4px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #bfbdbd;
 }
 .form__content {
   display: grid;
@@ -23,11 +23,11 @@
   font-size: 14px;
 }
 .form__input {
-  border: 1px solid #ddd;
+  border: 1px solid #bfbdbd;
   padding: 8px;
 }
 .form__button {
-  border: 1px solid #ddd;
+  border: 1px solid #bfbdbd;
   padding: 8px;
   border-radius: 20px;
 }
@@ -41,3 +41,5 @@ main {
 .user-list li {
   padding: 5px 0 5px 15px;
 }
+
+/*# sourceMappingURL=style.css.map */

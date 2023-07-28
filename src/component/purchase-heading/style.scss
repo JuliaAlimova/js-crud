@@ -1,0 +1,23 @@
+@use '../../lib/service.scss' as s;
+
+.heading {
+  display: grid;
+  gap: 20px;
+
+  &__title {
+    color: s.color('mainBlue');
+    font-size: 40px;
+    font-weight: 500;
+    &-small {
+      font-size: 24px;
+    }
+    &-center {
+      text-align: center;
+    }
+  }
+  &__info {
+    &-center {
+      text-align: center;
+    }
+  }
+}
