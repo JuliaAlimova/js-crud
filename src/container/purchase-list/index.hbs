@@ -1,0 +1,27 @@
+<main class="main">
+
+    {{> purchase-heading title="Мої замовлення"}}
+
+    <div class="purchase-list">
+        {{#each data.list}}
+        <a href="/purchase-info?id={{id}}" class="purchase-list__item">
+            <div class="item-group__title">ID: {{id}}</div>
+            <div class="item-group">
+                <p class="item-group__title">Товари</p>
+                <p>{{title}}</p>
+            </div>
+            <div class="item-group">
+                <p class="item-group__title">Сума замовлення</p>
+                <p>{{totalPrice}}₴</p>
+            </div>
+            <div class="item-group">
+                <p class="item-group__title">Нараховані бонуси</p>
+                <p>{{bonus}}₴</p>
+            </div>
+        </a>
+        {{/each}}
+    </div>
+
+    <a class="purchase-button" href="/purchase">{{>button text="Назад до покупок"}}</a>
+
+</main>

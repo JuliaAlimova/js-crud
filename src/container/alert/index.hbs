@@ -4,9 +4,14 @@
 }}
 
 <div class="alert">
-  <h1 class="alert__title" {{#if success}}style='color: #008a10' {{/if}}>{{info}}</h1>
-  <a class="alert__link" href="/product-create">Create product</a>
-  <a class="alert__link" href="/product-list">Products list</a>
+  <div class="alert-description">
+    <h1 class="alert-description__message" {{#if success}}style='color: #008a10' {{/if}}>{{message}}</h1>
+    <p class="alert-description__info">{{info}}</p>
+  </div>
+  <div class="alert-list">
+    <a class="alert-list__link" href="/{{linkBack}}">Back to {{linkBackText}}</a>
+    {{#if linkList}}<a class="alert-list__link" href="/{{linkList}}">Go to {{linkListText}}</a>{{/if}}
+  </div>
 </div>
 
 {{!

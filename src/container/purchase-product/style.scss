@@ -1,0 +1,49 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/purchase-heading/style.scss' as
+  heading;
+@use '../../component/purchase-product/style.scss' as
+  purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  display: grid;
+  padding: 100px 460px;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+.product-list {
+  display: grid;
+  gap: 60px 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product {
+  display: flex;
+  gap: s.space(5);
+
+  &__image {
+    min-height: 624px;
+    width: 490px;
+  }
+}
+
+.product-info {
+  display: grid;
+  gap: 30px;
+
+  &__title {
+    color: s.color('mainBlue');
+    font-size: 28px;
+    font-weight: 500;
+    border-bottom: 1px solid s.color('border');
+    padding-bottom: 30px;
+  }
+
+  &__subtitle {
+    line-height: 24px;
+    border-bottom: 1px solid s.color('border');
+    padding-bottom: 30px;
+  }
+}

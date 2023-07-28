@@ -1,0 +1,53 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/purchase-heading/style.scss' as
+  heading;
+@use '../../component/purchase-product/style.scss' as
+  purchaseProduct;
+@use '../../component/field/style.scss' as field;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  padding: 100px 460px;
+  margin: 0 auto;
+  display: grid;
+  gap: 60px;
+}
+
+.purchase-list {
+  display: grid;
+  gap: 20px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+    padding-bottom: 20px;
+    color: black;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+
+    &:hover {
+      background-color: bisque;
+    }
+    &:visited {
+      color: transparent;
+    }
+  }
+}
+
+.item-group {
+  display: grid;
+  gap: 12px;
+  width: 320px;
+
+  &__title {
+    color: s.color('mainBlue');
+  }
+}
+
+.purchase-button {
+  width: fit-content;
+}

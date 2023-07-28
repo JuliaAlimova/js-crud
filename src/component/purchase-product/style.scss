@@ -1,0 +1,43 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/button/style.scss' as button;
+
+.product-card {
+  border-radius: 12px;
+  border: 1px solid s.color('light');
+  display: flex;
+  width: 320px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: s.space(4);
+
+  &__image {
+    min-height: 300px;
+    width: 288px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    line-height: 23px;
+    color: s.color('dark');
+  }
+
+  &__category {
+    padding: 8px 16px;
+    border-radius: 80px;
+
+    &--1 {
+      color: s.color('mainSuccess');
+      border: 1px solid s.color('mainSuccess');
+    }
+    &--2 {
+      color: s.color('mainBlue');
+      border: 1px solid s.color('mainBlue');
+    }
+  }
+}

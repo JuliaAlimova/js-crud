@@ -1,0 +1,19 @@
+@use '../../lib/service.scss' as s;
+@use '../../component/purchase-heading/style.scss' as
+  heading;
+@use '../../component/purchase-product/style.scss' as
+  purchaseProduct;
+@use '../../component/button/style.scss' as button;
+
+.main {
+  display: grid;
+  padding: 100px 460px;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+.product-list {
+  display: grid;
+  gap: 60px 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
